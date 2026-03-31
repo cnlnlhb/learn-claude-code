@@ -1,5 +1,7 @@
 # learn-claude-code
 
+[中文 README](./README.zh-CN.md)
+
 A research repository for studying `@anthropic-ai/claude-code@2.1.88` from the published npm package.
 
 This repo is built from the released package artifact, its shipped sourcemap, and reconstructed source files. It is intended for reverse engineering, architecture study, and structured documentation — **not** as an official source mirror.
@@ -130,38 +132,38 @@ This is simplified, but it matches the strongest patterns visible in the recover
 
 ### If you care about security
 Start with:
-- Permissions & Risk Control
-- Authentication & Login
-- Remote / Bridge
-- Telemetry
+- [Permissions & Risk Control](./doc/permissions-risk-control.en.md)
+- [Authentication & Login](./doc/authentication-login.en.md)
+- [Remote / Bridge](./doc/remote-bridge.en.md)
+- [Telemetry](./doc/telemetry.en.md)
 
 ### If you care about product architecture
 Start with:
-- Authentication & Login
-- Multi-Agent
-- MCP
-- Remote / Bridge
+- [Authentication & Login](./doc/authentication-login.en.md)
+- [Multi-Agent](./doc/multi-agent.en.md)
+- [MCP](./doc/mcp.en.md)
+- [Remote / Bridge](./doc/remote-bridge.en.md)
 
 ### If you care about reverse engineering / implementation strategy
 Start with:
-- Update / Install
-- MCP
-- Multi-Agent
-- Telemetry
+- [Update / Install](./doc/update-install.en.md)
+- [MCP](./doc/mcp.en.md)
+- [Multi-Agent](./doc/multi-agent.en.md)
+- [Telemetry](./doc/telemetry.en.md)
 
 ### If you care about enterprise / managed-runtime behavior
 Start with:
-- Authentication & Login
-- Permissions & Risk Control
-- MCP
-- Remote / Bridge
-- Telemetry
+- [Authentication & Login](./doc/authentication-login.en.md)
+- [Permissions & Risk Control](./doc/permissions-risk-control.en.md)
+- [MCP](./doc/mcp.en.md)
+- [Remote / Bridge](./doc/remote-bridge.en.md)
+- [Telemetry](./doc/telemetry.en.md)
 
 ---
 
 ## Repository layout
 
-### `npm-original/`
+### [`npm-original/`](./npm-original/)
 Raw package artifacts and extracted release files.
 
 Typical contents include:
@@ -172,30 +174,30 @@ Typical contents include:
 - `package.json`
 - extraction metadata
 
-### `source/`
+### [`source/`](./source/)
 Reconstructed source tree derived from `cli.js.map`.
 
 This repo focuses on Claude Code’s own source and removes most third-party `node_modules` noise to make browsing easier.
 
-### `doc/`
+### [`doc/`](./doc/)
 Research and analysis documents.
 
 This is the most important directory for readers who want conclusions before code spelunking.
 
-### `README.md` / `README.zh-CN.md`
+### [`README.md`](./README.md) / [`README.zh-CN.md`](./README.zh-CN.md)
 Top-level navigation in English and Chinese.
 
 ---
 
 ## Documentation entry points
 
-- Main documentation index (English): `doc/INDEX.en.md`
-- 主文档索引（中文）: `doc/INDEX.zh-CN.md`
+- [Main documentation index (English)](./doc/INDEX.en.md)
+- [主文档索引（中文）](./doc/INDEX.zh-CN.md)
 
 If you are new to this repo, I recommend:
 
 1. read this README for repository scope
-2. open `doc/INDEX.en.md` for structured navigation
+2. open the [English documentation index](./doc/INDEX.en.md) for structured navigation
 3. then choose a reading path by topic
 
 ---
@@ -204,15 +206,15 @@ If you are new to this repo, I recommend:
 
 If you want one straightforward path, read in this order:
 
-1. **This README**
-2. **Documentation Index**
-3. **Authentication & Login**
-4. **Permissions & Risk Control**
-5. **Multi-Agent**
-6. **MCP**
-7. **Remote / Bridge**
-8. **Telemetry**
-9. **Update / Install**
+1. [This README](./README.md)
+2. [Documentation Index](./doc/INDEX.en.md)
+3. [Authentication & Login](./doc/authentication-login.en.md)
+4. [Permissions & Risk Control](./doc/permissions-risk-control.en.md)
+5. [Multi-Agent](./doc/multi-agent.en.md)
+6. [MCP](./doc/mcp.en.md)
+7. [Remote / Bridge](./doc/remote-bridge.en.md)
+8. [Telemetry](./doc/telemetry.en.md)
+9. [Update / Install](./doc/update-install.en.md)
 
 Why this order:
 
@@ -228,8 +230,8 @@ Why this order:
 ## Module analysis index
 
 ### 1. Authentication & Login
-- English: `doc/authentication-login.en.md`
-- 中文：`doc/authentication-login.zh-CN.md`
+- [English](./doc/authentication-login.en.md)
+- [中文](./doc/authentication-login.zh-CN.md)
 
 Focus:
 - OAuth + PKCE
@@ -239,8 +241,8 @@ Focus:
 - trusted-device coupling
 
 ### 2. Permissions & Risk Control
-- English: `doc/permissions-risk-control.en.md`
-- 中文：`doc/permissions-risk-control.zh-CN.md`
+- [English](./doc/permissions-risk-control.en.md)
+- [中文](./doc/permissions-risk-control.zh-CN.md)
 
 Focus:
 - permission modes
@@ -250,8 +252,8 @@ Focus:
 - Bash security analysis
 
 ### 3. Multi-Agent
-- English: `doc/multi-agent.en.md`
-- 中文：`doc/multi-agent.zh-CN.md`
+- [English](./doc/multi-agent.en.md)
+- [中文](./doc/multi-agent.zh-CN.md)
 
 Focus:
 - AgentTool
@@ -261,8 +263,8 @@ Focus:
 - mailbox and leader approval bridge
 
 ### 4. MCP
-- English: `doc/mcp.en.md`
-- 中文：`doc/mcp.zh-CN.md`
+- [English](./doc/mcp.en.md)
+- [中文](./doc/mcp.zh-CN.md)
 
 Focus:
 - MCP connection lifecycle
@@ -272,8 +274,8 @@ Focus:
 - policy-aware extension model
 
 ### 5. Remote / Bridge
-- English: `doc/remote-bridge.en.md`
-- 中文：`doc/remote-bridge.zh-CN.md`
+- [English](./doc/remote-bridge.en.md)
+- [中文](./doc/remote-bridge.zh-CN.md)
 
 Focus:
 - bridge workers
@@ -283,8 +285,8 @@ Focus:
 - remote permission return paths
 
 ### 6. Telemetry
-- English: `doc/telemetry.en.md`
-- 中文：`doc/telemetry.zh-CN.md`
+- [English](./doc/telemetry.en.md)
+- [中文](./doc/telemetry.zh-CN.md)
 
 Focus:
 - analytics entry points
@@ -294,8 +296,8 @@ Focus:
 - privacy and kill switches
 
 ### 7. Update / Install
-- English: `doc/update-install.en.md`
-- 中文：`doc/update-install.zh-CN.md`
+- [English](./doc/update-install.en.md)
+- [中文](./doc/update-install.zh-CN.md)
 
 Focus:
 - auto updater
@@ -371,8 +373,8 @@ This repo is **not**:
 
 ## Language
 
-- English: `README.md`
-- 中文：`README.zh-CN.md`
+- [English README](./README.md)
+- [中文 README](./README.zh-CN.md)
 
 ---
 
@@ -380,13 +382,13 @@ This repo is **not**:
 
 Completed module reports:
 
-- Authentication & Login
-- Permissions & Risk Control
-- Multi-Agent
-- MCP
-- Remote / Bridge
-- Telemetry
-- Update / Install
+- [Authentication & Login](./doc/authentication-login.en.md)
+- [Permissions & Risk Control](./doc/permissions-risk-control.en.md)
+- [Multi-Agent](./doc/multi-agent.en.md)
+- [MCP](./doc/mcp.en.md)
+- [Remote / Bridge](./doc/remote-bridge.en.md)
+- [Telemetry](./doc/telemetry.en.md)
+- [Update / Install](./doc/update-install.en.md)
 
 ---
 
@@ -402,7 +404,7 @@ Completed module reports:
 
 Possible future additions to this repo:
 
-- a hidden commands / feature flags report
+- hidden commands / feature flags report
 - a dedicated permissions-bypass deep dive
 - a remote session protocol note
 - a telemetry privacy-boundary note
