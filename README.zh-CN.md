@@ -28,7 +28,11 @@
   - 中文：`doc/authentication-login.zh-CN.md`
   - English: `doc/authentication-login.en.md`
 
-> 后续还会继续补充：权限风控、多 Agent、MCP、远程/桥接、埋点、更新/安装等模块的中英文专题分析。
+- 权限风控 / Permissions & Risk Control
+  - 中文：`doc/permissions-risk-control.zh-CN.md`
+  - English: `doc/permissions-risk-control.en.md`
+
+> 后续还会继续补充：多 Agent、MCP、远程/桥接、埋点、更新/安装等模块的中英文专题分析。
 
 ## 说明
 

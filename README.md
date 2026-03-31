@@ -32,7 +32,11 @@ This repository stores a local research copy of `@anthropic-ai/claude-code@2.1.8
   - English: `doc/authentication-login.en.md`
   - 中文：`doc/authentication-login.zh-CN.md`
 
-> More module reports will be added incrementally: permissions & risk controls, multi-agent, MCP, remote/bridge, telemetry, and update/install.
+- Permissions & Risk Control
+  - English: `doc/permissions-risk-control.en.md`
+  - 中文：`doc/permissions-risk-control.zh-CN.md`
+
+> More module reports will be added incrementally: multi-agent, MCP, remote/bridge, telemetry, and update/install.
 
 ## Notes
 
