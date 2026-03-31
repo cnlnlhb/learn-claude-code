@@ -40,7 +40,11 @@ This repository stores a local research copy of `@anthropic-ai/claude-code@2.1.8
   - English: `doc/multi-agent.en.md`
   - 中文：`doc/multi-agent.zh-CN.md`
 
-> More module reports will be added incrementally: MCP, remote/bridge, telemetry, and update/install.
+- MCP
+  - English: `doc/mcp.en.md`
+  - 中文：`doc/mcp.zh-CN.md`
+
+> More module reports will be added incrementally: remote/bridge, telemetry, and update/install.
 
 ## Notes
 

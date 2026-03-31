@@ -36,7 +36,11 @@
   - 中文：`doc/multi-agent.zh-CN.md`
   - English: `doc/multi-agent.en.md`
 
-> 后续还会继续补充：MCP、远程/桥接、埋点、更新/安装等模块的中英文专题分析。
+- MCP
+  - 中文：`doc/mcp.zh-CN.md`
+  - English: `doc/mcp.en.md`
+
+> 后续还会继续补充：远程/桥接、埋点、更新/安装等模块的中英文专题分析。
 
 ## 说明
 
