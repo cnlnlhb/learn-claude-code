@@ -58,6 +58,107 @@ From the reconstructed source, it appears to include substantial subsystems for:
 
 ---
 
+## Top findings at a glance
+
+If you only read one section on this page, read this one.
+
+1. **Identity is central to runtime behavior**
+   - login/logout affects more than credentials
+   - auth transitions refresh policy, feature gates, trusted-device state, and dependent services
+
+2. **Permissions are layered, not binary**
+   - modes, allow/deny/ask rules, classifiers, managed policy, and shell-safety checks all interact
+
+3. **Multi-agent is first-class, not experimental garnish**
+   - the codebase contains teammate/swarm/task/mailbox/leader-control machinery, not just a single subagent helper
+
+4. **MCP is deeply productized**
+   - connection lifecycle, auth, registry, commands, resources, policy filtering, and UI all indicate core-platform status
+
+5. **Remote execution is session-centric and high-trust**
+   - bridge workers, session ingress auth, trusted-device tokens, and approval return paths point to a serious remote session plane
+
+6. **Telemetry is operational infrastructure, not just logging**
+   - Datadog, first-party event logging, GrowthBook, and OTel-style paths are clearly separated by purpose and privacy boundaries
+
+7. **Distribution is in transition**
+   - the code strongly suggests migration from npm-based delivery toward a native installer model
+
+---
+
+## Architecture map
+
+A rough mental model of the recovered system:
+
+```text
+                         +----------------------+
+                         |   Auth / Identity    |
+                         | OAuth, API keys,     |
+                         | managed context,     |
+                         | trusted device       |
+                         +----------+-----------+
+                                    |
+                                    v
++------------------+      +---------+----------+      +------------------+
+| Update / Install | ---> |   Core Runtime     | <--- |   Telemetry      |
+| npm, local,      |      | commands, tools,   |      | Datadog, 1P,     |
+| native installer |      | state, sessions    |      | GrowthBook, OTel |
++------------------+      +----+-----------+---+      +------------------+
+                                |           |
+                                |           |
+                                v           v
+                     +----------+--+   +---+---------------+
+                     | Permissions |   | Extensibility     |
+                     | modes,      |   | MCP, plugins,     |
+                     | rules,      |   | dynamic tools /   |
+                     | classifiers |   | commands/resources|
+                     +------+------+
+                            |
+                            v
+                  +---------+-------------------+
+                  | Orchestration / Execution   |
+                  | multi-agent, swarm, remote, |
+                  | bridge, direct connect      |
+                  +-----------------------------+
+```
+
+This is simplified, but it matches the strongest patterns visible in the recovered package.
+
+---
+
+## Start here by reader type
+
+### If you care about security
+Start with:
+- Permissions & Risk Control
+- Authentication & Login
+- Remote / Bridge
+- Telemetry
+
+### If you care about product architecture
+Start with:
+- Authentication & Login
+- Multi-Agent
+- MCP
+- Remote / Bridge
+
+### If you care about reverse engineering / implementation strategy
+Start with:
+- Update / Install
+- MCP
+- Multi-Agent
+- Telemetry
+
+### If you care about enterprise / managed-runtime behavior
+Start with:
+- Authentication & Login
+- Permissions & Risk Control
+- MCP
+- Remote / Bridge
+- Telemetry
+
+---
+
 ## Repository layout
 
 ### `npm-original/`

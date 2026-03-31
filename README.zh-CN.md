@@ -61,6 +61,107 @@
 
 ---
 
+## 一眼看懂的关键结论
+
+如果你只想先抓重点，先看这一段。
+
+1. **身份状态是运行时控制面的核心输入**
+   - 登录/登出影响的不只是 token
+   - 还会联动 policy、feature gate、trusted device 和依赖服务状态
+
+2. **权限系统不是二元开关，而是分层治理**
+   - permission mode、allow/deny/ask、classifier、managed policy、shell 安全检查会一起起作用
+
+3. **多 Agent 是一级能力，不是边缘实验**
+   - 代码里有 teammate / swarm / task / mailbox / leader control 一整套协作机制
+
+4. **MCP 已经高度产品化**
+   - 连接管理、认证、registry、commands、resources、policy filtering、UI 都说明它是核心扩展总线
+
+5. **远程执行是 session-centric 且高信任等级的能力**
+   - bridge worker、session ingress auth、trusted device token、approval return path 都不是轻量设计
+
+6. **telemetry 是运行时基础设施，不只是打日志**
+   - Datadog、1P event logging、GrowthBook、OTel 风格路径各自承担不同角色，并带明显隐私边界
+
+7. **交付系统明显处于迁移期**
+   - 代码强烈表明它正在从 npm 分发向 native installer 分发演进
+
+---
+
+## 架构地图
+
+一个便于快速建立直觉的简化心智模型：
+
+```text
+                         +----------------------+
+                         |   Auth / Identity    |
+                         | OAuth, API keys,     |
+                         | managed context,     |
+                         | trusted device       |
+                         +----------+-----------+
+                                    |
+                                    v
++------------------+      +---------+----------+      +------------------+
+| Update / Install | ---> |   Core Runtime     | <--- |   Telemetry      |
+| npm, local,      |      | commands, tools,   |      | Datadog, 1P,     |
+| native installer |      | state, sessions    |      | GrowthBook, OTel |
++------------------+      +----+-----------+---+      +------------------+
+                                |           |
+                                |           |
+                                v           v
+                     +----------+--+   +---+---------------+
+                     | Permissions |   | Extensibility     |
+                     | modes,      |   | MCP, plugins,     |
+                     | rules,      |   | dynamic tools /   |
+                     | classifiers |   | commands/resources|
+                     +------+------+
+                            |
+                            v
+                  +---------+-------------------+
+                  | Orchestration / Execution   |
+                  | multi-agent, swarm, remote, |
+                  | bridge, direct connect      |
+                  +-----------------------------+
+```
+
+这是一个简化图，但和当前恢复出来的包结构基本吻合。
+
+---
+
+## 按读者类型从哪里开始
+
+### 如果你更关心安全
+建议先看：
+- 权限风控
+- 认证登录
+- 远程 / 桥接
+- 埋点 / Telemetry
+
+### 如果你更关心产品架构
+建议先看：
+- 认证登录
+- 多 Agent
+- MCP
+- 远程 / 桥接
+
+### 如果你更关心逆向方法 / 实现策略
+建议先看：
+- 更新 / 安装
+- MCP
+- 多 Agent
+- 埋点 / Telemetry
+
+### 如果你更关心企业/托管运行时能力
+建议先看：
+- 认证登录
+- 权限风控
+- MCP
+- 远程 / 桥接
+- 埋点 / Telemetry
+
+---
+
 ## 仓库结构
 
 ### `npm-original/`
