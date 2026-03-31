@@ -40,7 +40,11 @@
   - 中文：`doc/mcp.zh-CN.md`
   - English: `doc/mcp.en.md`
 
-> 后续还会继续补充：远程/桥接、埋点、更新/安装等模块的中英文专题分析。
+- 远程 / 桥接 / Remote / Bridge
+  - 中文：`doc/remote-bridge.zh-CN.md`
+  - English: `doc/remote-bridge.en.md`
+
+> 后续还会继续补充：埋点、更新/安装等模块的中英文专题分析。
 
 ## 说明
 

@@ -44,7 +44,11 @@ This repository stores a local research copy of `@anthropic-ai/claude-code@2.1.8
   - English: `doc/mcp.en.md`
   - 中文：`doc/mcp.zh-CN.md`
 
-> More module reports will be added incrementally: remote/bridge, telemetry, and update/install.
+- Remote / Bridge
+  - English: `doc/remote-bridge.en.md`
+  - 中文：`doc/remote-bridge.zh-CN.md`
+
+> More module reports will be added incrementally: telemetry, and update/install.
 
 ## Notes
 
