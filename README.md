@@ -11,14 +11,28 @@ This repository stores a local research copy of `@anthropic-ai/claude-code@2.1.8
    - Focused on Claude Code's own source (third-party `node_modules` removed)
 
 3. **doc/**
-   - Analysis reports, module mapping, structure summary, and sensitive-surface scans
+   - Analysis reports, module mapping, structure summary, and topic-focused notes
+
+## Language
+
+- English: `README.md`
+- 中文：`README.zh-CN.md`
 
 ## Layout
 
 - `npm-original/` — raw package artifacts
 - `source/` — reconstructed source code
 - `doc/` — analysis documents
-- `README.md` — overview
+- `README.md` — English overview
+- `README.zh-CN.md` — 中文说明
+
+## Module analysis index
+
+- Authentication & Login
+  - English: `doc/authentication-login.en.md`
+  - 中文：`doc/authentication-login.zh-CN.md`
+
+> More module reports will be added incrementally: permissions & risk controls, multi-agent, MCP, remote/bridge, telemetry, and update/install.
 
 ## Notes
 
@@ -26,3 +40,16 @@ This repository stores a local research copy of `@anthropic-ai/claude-code@2.1.8
 - Version: `2.1.88`
 - Source reconstruction is based on `sources` + `sourcesContent` embedded in `cli.js.map`
 - This repo is organized for inspection and learning
+- This is a research and analysis repository, not an official source mirror
+
+## Current high-level impression
+
+From the recovered source tree, Claude Code 2.1.88 appears to be much more than a thin terminal wrapper. It includes:
+
+- a full OAuth / API-key authentication stack
+- permission approval and risk-control logic
+- multi-agent / teammate / swarm collaboration features
+- deep MCP integration
+- remote-control / bridge / direct-connect capabilities
+- telemetry / analytics / experiment infrastructure
+- update and local installation logic
