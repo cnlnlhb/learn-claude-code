@@ -1,56 +1,282 @@
 # learn-claude-code
 
-这个仓库保存了对 `@anthropic-ai/claude-code@2.1.88` 的本地研究副本，主要包括：
+一个围绕 `@anthropic-ai/claude-code@2.1.88` npm 发布包做的研究型仓库。
 
-1. **npm-original/**
-   - 从 npm 下载的原始包与关键产物
-   - 包含用于还原源码的 `cli.js.map`
+这个仓库基于**已公开发布的 npm 包**、其自带 sourcemap，以及从 sourcemap 中恢复出的源码文件构建而成。它的目标是用于逆向分析、架构研究和结构化文档整理，**不是官方源码镜像**。
 
-2. **source/**
-   - 从 `cli.js.map` 中的 `sources` + `sourcesContent` 还原出的源码树
-   - 当前仓库保留的是 Claude Code 自有源码为主的整理版本（已去除大部分第三方 `node_modules`）
+---
 
-3. **doc/**
-   - 各类分析文档
-   - 包括模块梳理、结构分析、敏感点扫描，以及按专题拆分的中英文报告
+## 这个仓库包含什么
 
-## 目录结构
+这个仓库大致分成四层：
 
-- `npm-original/` — npm 原始文件与关键包内容
-- `source/` — 解析还原后的源码
-- `doc/` — 分析文档
-- `README.md` — 英文说明
-- `README.zh-CN.md` — 中文说明
+1. **原始 npm 产物**
+   - 从 npm 下载到的原始包
+   - 解包后的关键文件，例如 `cli.js`、`cli.js.map`、`package.json`
+
+2. **解析恢复后的源码**
+   - 基于 `cli.js.map` 恢复出的源码树
+   - 重点保留 Claude Code 自有源码，尽量去掉第三方 `node_modules` 噪音
+
+3. **研究分析文档**
+   - 中英双语模块分析文档
+   - 结构梳理、专题结论、阅读导航
+
+4. **仓库级导航**
+   - 英文 README
+   - 中文 README
+   - 推荐阅读顺序与主题索引
+
+---
+
+## 为什么会有这个仓库
+
+因为 `@anthropic-ai/claude-code@2.1.88` 这个 npm 版本随包发布了一个可用的 sourcemap：
+
+- `cli.js.map`
+
+而且这个 sourcemap 内嵌了 `sourcesContent`，因此可以：
+
+- 恢复出大量源码文件
+- 直接观察发布构建中的架构设计
+- 系统研究 Claude Code 在认证、权限、多 Agent、MCP、远程会话、埋点、安装更新等方面的实现思路
+
+这个仓库就是把这些工作整理成一个更适合阅读的研究仓库，而不是让人直接去翻生硬的 npm tarball。
+
+---
+
+## 核心发现
+
+`@anthropic-ai/claude-code@2.1.88` **并不是一个薄薄的终端壳**。
+
+从恢复出的源码来看，它至少包含这些较完整的子系统：
+
+- OAuth / API Key 认证体系
+- 权限审批与风险控制体系
+- 多 Agent / teammate / swarm 协作运行时
+- 深度 MCP 集成
+- 远程会话 / bridge / direct connect 执行能力
+- telemetry / analytics / experiments 基础设施
+- 安装、升级、迁移与分发逻辑
+
+---
+
+## 仓库结构
+
+### `npm-original/`
+原始 npm 产物与关键发布文件。
+
+典型内容包括：
+
+- `anthropic-ai-claude-code-2.1.88.tgz`
+- `cli.js`
+- `cli.js.map`
+- `package.json`
+- 提取统计信息
+
+### `source/`
+从 `cli.js.map` 恢复出来的源码树。
+
+当前仓库重点保留 Claude Code 自有源码，尽量剥离第三方依赖，方便浏览。
+
+### `doc/`
+研究分析文档目录。
+
+如果你是第一次看这个仓库，这里通常比直接翻源码更值得先看。
+
+### `README.md` / `README.zh-CN.md`
+英文与中文导航首页。
+
+---
+
+## 文档入口
+
+- 英文主索引：`doc/INDEX.en.md`
+- 中文主索引：`doc/INDEX.zh-CN.md`
+
+如果你第一次看这个仓库，我建议：
+
+1. 先读本 README，了解仓库范围
+2. 再打开 `doc/INDEX.zh-CN.md` 看结构化导航
+3. 然后按主题选择阅读路径
+
+---
+
+## 推荐阅读顺序
+
+如果你想走一条最直接的主线，建议按下面顺序读：
+
+1. **本 README**
+2. **文档索引**
+3. **认证登录**
+4. **权限风控**
+5. **多 Agent**
+6. **MCP**
+7. **远程 / 桥接**
+8. **埋点 / Telemetry**
+9. **更新 / 安装**
+
+原因大致是：
+
+- 认证解释身份状态
+- 权限解释执行控制
+- 多 Agent 与 MCP 解释扩展与协作
+- 远程 / 桥接解释高权限远程执行模型
+- telemetry 解释可观测性与 rollout 控制
+- 更新 / 安装解释客户端交付与迁移策略
+
+---
 
 ## 模块分析导航
 
-- 认证登录 / Authentication & Login
-  - 中文：`doc/authentication-login.zh-CN.md`
-  - English: `doc/authentication-login.en.md`
+### 1. 认证登录 / Authentication & Login
+- 中文：`doc/authentication-login.zh-CN.md`
+- English: `doc/authentication-login.en.md`
 
-- 权限风控 / Permissions & Risk Control
-  - 中文：`doc/permissions-risk-control.zh-CN.md`
-  - English: `doc/permissions-risk-control.en.md`
+重点：
+- OAuth + PKCE
+- Claude.ai / Console 双入口
+- token 来源管理
+- managed auth context
+- trusted device 联动
 
-- 多 Agent / Multi-Agent
-  - 中文：`doc/multi-agent.zh-CN.md`
-  - English: `doc/multi-agent.en.md`
+### 2. 权限风控 / Permissions & Risk Control
+- 中文：`doc/permissions-risk-control.zh-CN.md`
+- English: `doc/permissions-risk-control.en.md`
 
-- MCP
-  - 中文：`doc/mcp.zh-CN.md`
-  - English: `doc/mcp.en.md`
+重点：
+- permission modes
+- 规则系统
+- classifier 驱动审批
+- managed policy
+- Bash 安全分析
 
-- 远程 / 桥接 / Remote / Bridge
-  - 中文：`doc/remote-bridge.zh-CN.md`
-  - English: `doc/remote-bridge.en.md`
+### 3. 多 Agent / Multi-Agent
+- 中文：`doc/multi-agent.zh-CN.md`
+- English: `doc/multi-agent.en.md`
 
-- 埋点 / Telemetry
-  - 中文：`doc/telemetry.zh-CN.md`
-  - English: `doc/telemetry.en.md`
+重点：
+- AgentTool
+- fork subagent
+- teammate / swarm runtime
+- task list
+- mailbox 与 leader approval bridge
 
-- 更新 / 安装 / Update / Install
-  - 中文：`doc/update-install.zh-CN.md`
-  - English: `doc/update-install.en.md`
+### 4. MCP
+- 中文：`doc/mcp.zh-CN.md`
+- English: `doc/mcp.en.md`
+
+重点：
+- MCP 连接生命周期
+- transport 与 auth
+- official registry
+- 动态 tools / commands / resources
+- 受策略控制的扩展模型
+
+### 5. 远程 / 桥接 / Remote / Bridge
+- 中文：`doc/remote-bridge.zh-CN.md`
+- English: `doc/remote-bridge.en.md`
+
+重点：
+- bridge worker
+- session ingress auth
+- trusted device
+- direct connect
+- 远程权限回流路径
+
+### 6. 埋点 / Telemetry
+- 中文：`doc/telemetry.zh-CN.md`
+- English: `doc/telemetry.en.md`
+
+重点：
+- analytics 入口
+- Datadog 与 1P event logging
+- GrowthBook
+- metadata enrich
+- privacy 与 kill switch
+
+### 7. 更新 / 安装 / Update / Install
+- 中文：`doc/update-install.zh-CN.md`
+- English: `doc/update-install.en.md`
+
+重点：
+- auto updater
+- native installer
+- npm global/local 迁移
+- package manager 检测
+- 版本 gate 与 rollout 安全
+
+---
+
+## 按主题快速结论
+
+### 身份体系
+Claude Code 把认证当成控制平面的一部分，而不只是“有没有 token”。
+
+### 执行安全
+权限系统是分层设计：模式、规则、分类器、shell 级风险分析一起决定是否允许执行。
+
+### 协作运行时
+多 Agent 是一级能力，不是附属插件；它有 task、mailbox、leader 控制与多后端执行模型。
+
+### 扩展能力
+MCP 深度嵌入命令、工具、权限与 UI，不是一个临时外挂接口。
+
+### 远程执行
+远程能力围绕 session 生命周期设计，并且和强身份、可信设备、权限回流紧密绑定。
+
+### 可观测性
+telemetry 不是单一日志出口，而是分成 Datadog、1P、OTel 等多层路径，并且带隐私边界控制。
+
+### 交付与升级
+安装/更新系统明显处于从 npm 分发向 native installer 分发迁移的过程中。
+
+---
+
+## 方法说明
+
+这个仓库大致按下面步骤构建：
+
+1. 下载 `@anthropic-ai/claude-code@2.1.88` npm 包
+2. 解压包内容
+3. 检查 `cli.js.map`
+4. 从其中内嵌的 `sourcesContent` 恢复文件
+5. 剥离/区分第一方源码与第三方打包代码
+6. 按模块写结构化分析文档
+
+需要注意：
+
+- 这里的源码来自发布构建，不是原始开发仓库
+- 文件名和内容仍然高度有价值，但可能带有构建期变换
+- 某些内部专用或 feature gate 逻辑，在公开包里可能是 stub、缺失或部分呈现
+
+---
+
+## 适用范围与局限
+
+这个仓库适合用于：
+
+- 架构研究
+- 逆向分析
+- 安全审查切入点整理
+- 产品能力分析
+- 实现模式对比
+
+这个仓库**不等于**：
+
+- 官方源码发布
+- 完整无缺的真相
+- 与 Anthropic 内部构建完全一致
+- 对运行时行为测试的替代品
+
+---
+
+## 语言
+
+- English: `README.md`
+- 中文：`README.zh-CN.md`
+
+---
 
 ## 当前状态
 
@@ -64,21 +290,28 @@
 - 埋点 / Telemetry
 - 更新 / 安装
 
-## 说明
+---
+
+## 包信息
 
 - 包名：`@anthropic-ai/claude-code`
-- 版本：`2.1.88`
-- 源码还原依据：`cli.js.map` 中内嵌的 `sources` 与 `sourcesContent`
-- 这个仓库的目标是便于学习、审阅和结构化分析，不是官方源码镜像
+- 分析版本：`2.1.88`
+- 还原依据：`cli.js.map` 中内嵌的 `sources` + `sourcesContent`
 
-## 当前观察
+---
 
-从源码结构看，Claude Code 2.1.88 并不是一个简单的终端包装器，而是包含了：
+## 后续可以继续补的内容
 
-- 完整的 OAuth / API Key 认证体系
-- 权限审批与风险控制机制
-- 多 Agent / teammate / swarm 协作能力
-- MCP 集成
-- 远程控制 / bridge / direct connect 能力
-- telemetry / analytics / experiments 基础设施
-- 自动更新与本地安装逻辑
+这个仓库后面还可以继续补这些专题：
+
+- hidden commands / feature flags 专题
+- 权限绕过链路深挖
+- remote session 协议笔记
+- telemetry 隐私边界专题
+- MCP auth 深挖
+
+---
+
+## 声明
+
+这个仓库用于对公开发布 npm 包产物进行研究、学习和分析，不代表 Anthropic 官方立场，也不构成官方源码发布。
