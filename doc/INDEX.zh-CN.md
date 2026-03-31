@@ -1,17 +1,23 @@
 # 文档索引
 
-这个索引用来作为仓库研究文档的结构化入口。
+[返回 README](../README.zh-CN.md) · [English Index](./INDEX.en.md)
 
-如果你是第一次看这个仓库，建议从这里开始：
+这个页面是本仓库研究文档的结构化导航中心。
 
-1. `../README.zh-CN.md`
-2. `authentication-login.zh-CN.md`
-3. `permissions-risk-control.zh-CN.md`
-4. `multi-agent.zh-CN.md`
-5. `mcp.zh-CN.md`
-6. `remote-bridge.zh-CN.md`
-7. `telemetry.zh-CN.md`
-8. `update-install.zh-CN.md`
+---
+
+## 从这里开始
+
+如果你第一次看这个仓库，建议按这个顺序：
+
+1. [README](../README.zh-CN.md)
+2. [认证登录](./authentication-login.zh-CN.md)
+3. [权限风控](./permissions-risk-control.zh-CN.md)
+4. [多 Agent](./multi-agent.zh-CN.md)
+5. [MCP](./mcp.zh-CN.md)
+6. [远程 / 桥接](./remote-bridge.zh-CN.md)
+7. [埋点 / Telemetry](./telemetry.zh-CN.md)
+8. [更新 / 安装](./update-install.zh-CN.md)
 
 ---
 
@@ -19,11 +25,11 @@
 
 ### 路径 A —— 把 Claude Code 当作一个产品运行时来理解
 
-1. 认证登录
-2. 权限风控
-3. 远程 / 桥接
-4. 埋点 / Telemetry
-5. 更新 / 安装
+1. [认证登录](./authentication-login.zh-CN.md)
+2. [权限风控](./permissions-risk-control.zh-CN.md)
+3. [远程 / 桥接](./remote-bridge.zh-CN.md)
+4. [埋点 / Telemetry](./telemetry.zh-CN.md)
+5. [更新 / 安装](./update-install.zh-CN.md)
 
 原因：
 - 认证解释系统如何识别“你是谁”
@@ -34,10 +40,10 @@
 
 ### 路径 B —— 把 Claude Code 当作一个编排系统来理解
 
-1. 多 Agent
-2. MCP
-3. 远程 / 桥接
-4. 权限风控
+1. [多 Agent](./multi-agent.zh-CN.md)
+2. [MCP](./mcp.zh-CN.md)
+3. [远程 / 桥接](./remote-bridge.zh-CN.md)
+4. [权限风控](./permissions-risk-control.zh-CN.md)
 
 原因：
 - 多 Agent 解释 worker 编排
@@ -47,10 +53,10 @@
 
 ### 路径 C —— 把 Claude Code 当作一个安全执行客户端来理解
 
-1. 认证登录
-2. 权限风控
-3. 远程 / 桥接
-4. 埋点 / Telemetry
+1. [认证登录](./authentication-login.zh-CN.md)
+2. [权限风控](./permissions-risk-control.zh-CN.md)
+3. [远程 / 桥接](./remote-bridge.zh-CN.md)
+4. [埋点 / Telemetry](./telemetry.zh-CN.md)
 
 原因：
 - 认证控制身份
@@ -60,11 +66,11 @@
 
 ---
 
-## 模块文档
+## 模块入口
 
 ### 认证登录 / Authentication & Login
-- `authentication-login.zh-CN.md`
-- `authentication-login.en.md`
+- [中文](./authentication-login.zh-CN.md)
+- [English](./authentication-login.en.md)
 
 主题：
 - OAuth + PKCE
@@ -74,8 +80,8 @@
 - trusted device 联动
 
 ### 权限风控 / Permissions & Risk Control
-- `permissions-risk-control.zh-CN.md`
-- `permissions-risk-control.en.md`
+- [中文](./permissions-risk-control.zh-CN.md)
+- [English](./permissions-risk-control.en.md)
 
 主题：
 - permission modes
@@ -85,8 +91,8 @@
 - Bash / zsh 风险分析
 
 ### 多 Agent / Multi-Agent
-- `multi-agent.zh-CN.md`
-- `multi-agent.en.md`
+- [中文](./multi-agent.zh-CN.md)
+- [English](./multi-agent.en.md)
 
 主题：
 - AgentTool
@@ -96,8 +102,8 @@
 - mailbox 与 leader approval bridge
 
 ### MCP
-- `mcp.zh-CN.md`
-- `mcp.en.md`
+- [中文](./mcp.zh-CN.md)
+- [English](./mcp.en.md)
 
 主题：
 - MCP 连接生命周期
@@ -107,8 +113,8 @@
 - 受策略控制的扩展模型
 
 ### 远程 / 桥接 / Remote / Bridge
-- `remote-bridge.zh-CN.md`
-- `remote-bridge.en.md`
+- [中文](./remote-bridge.zh-CN.md)
+- [English](./remote-bridge.en.md)
 
 主题：
 - bridge worker
@@ -118,8 +124,8 @@
 - 远程审批 / 控制回流
 
 ### 埋点 / Telemetry
-- `telemetry.zh-CN.md`
-- `telemetry.en.md`
+- [中文](./telemetry.zh-CN.md)
+- [English](./telemetry.en.md)
 
 主题：
 - analytics 入口层
@@ -129,8 +135,8 @@
 - 隐私控制与 kill switch
 
 ### 更新 / 安装 / Update / Install
-- `update-install.zh-CN.md`
-- `update-install.en.md`
+- [中文](./update-install.zh-CN.md)
+- [English](./update-install.en.md)
 
 主题：
 - auto updater
@@ -141,14 +147,12 @@
 
 ---
 
-## 仓库中已有的辅助材料
+## 仓库中的辅助材料
 
-如果你想先看结构再下钻，这些也值得先看：
-
-- `../README.md`
-- `../README.zh-CN.md`
-- `../npm-original/`
-- `../source/`
+- [README（英文）](../README.md)
+- [README（中文）](../README.zh-CN.md)
+- [npm-original/](../npm-original/)
+- [source/](../source/)
 
 ---
 

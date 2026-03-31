@@ -1,29 +1,35 @@
 # Documentation Index
 
-This index provides a structured entry point into the research documents in this repository.
+[Back to README](../README.md) · [中文索引](./INDEX.zh-CN.md)
 
-If you are new here, start with:
-
-1. `../README.md`
-2. `authentication-login.en.md`
-3. `permissions-risk-control.en.md`
-4. `multi-agent.en.md`
-5. `mcp.en.md`
-6. `remote-bridge.en.md`
-7. `telemetry.en.md`
-8. `update-install.en.md`
+This page is the structured navigation hub for the research documents in this repository.
 
 ---
 
-## Recommended reading paths
+## Start here
 
-### Path A — Understand Claude Code as a product runtime
+If you are new to the repo, start in this order:
 
-1. Authentication & Login
-2. Permissions & Risk Control
-3. Remote / Bridge
-4. Telemetry
-5. Update / Install
+1. [README](../README.md)
+2. [Authentication & Login](./authentication-login.en.md)
+3. [Permissions & Risk Control](./permissions-risk-control.en.md)
+4. [Multi-Agent](./multi-agent.en.md)
+5. [MCP](./mcp.en.md)
+6. [Remote / Bridge](./remote-bridge.en.md)
+7. [Telemetry](./telemetry.en.md)
+8. [Update / Install](./update-install.en.md)
+
+---
+
+## Reading paths
+
+### Path A — Claude Code as a product runtime
+
+1. [Authentication & Login](./authentication-login.en.md)
+2. [Permissions & Risk Control](./permissions-risk-control.en.md)
+3. [Remote / Bridge](./remote-bridge.en.md)
+4. [Telemetry](./telemetry.en.md)
+5. [Update / Install](./update-install.en.md)
 
 Why:
 - identity explains who the runtime thinks you are
@@ -32,12 +38,12 @@ Why:
 - telemetry explains how behavior is observed and controlled
 - update/install explains how the client is delivered and migrated
 
-### Path B — Understand Claude Code as an orchestration system
+### Path B — Claude Code as an orchestration system
 
-1. Multi-Agent
-2. MCP
-3. Remote / Bridge
-4. Permissions & Risk Control
+1. [Multi-Agent](./multi-agent.en.md)
+2. [MCP](./mcp.en.md)
+3. [Remote / Bridge](./remote-bridge.en.md)
+4. [Permissions & Risk Control](./permissions-risk-control.en.md)
 
 Why:
 - multi-agent explains worker orchestration
@@ -45,12 +51,12 @@ Why:
 - remote/bridge explains session transport and control
 - permissions explains how execution authority is constrained
 
-### Path C — Understand Claude Code as a secure execution client
+### Path C — Claude Code as a secure execution client
 
-1. Authentication & Login
-2. Permissions & Risk Control
-3. Remote / Bridge
-4. Telemetry
+1. [Authentication & Login](./authentication-login.en.md)
+2. [Permissions & Risk Control](./permissions-risk-control.en.md)
+3. [Remote / Bridge](./remote-bridge.en.md)
+4. [Telemetry](./telemetry.en.md)
 
 Why:
 - auth controls identity
@@ -60,11 +66,11 @@ Why:
 
 ---
 
-## Module documents
+## Module portal
 
 ### Authentication & Login
-- `authentication-login.en.md`
-- `authentication-login.zh-CN.md`
+- [English](./authentication-login.en.md)
+- [中文](./authentication-login.zh-CN.md)
 
 Topics:
 - OAuth + PKCE
@@ -74,8 +80,8 @@ Topics:
 - trusted-device coupling
 
 ### Permissions & Risk Control
-- `permissions-risk-control.en.md`
-- `permissions-risk-control.zh-CN.md`
+- [English](./permissions-risk-control.en.md)
+- [中文](./permissions-risk-control.zh-CN.md)
 
 Topics:
 - permission modes
@@ -85,8 +91,8 @@ Topics:
 - Bash/zsh risk analysis
 
 ### Multi-Agent
-- `multi-agent.en.md`
-- `multi-agent.zh-CN.md`
+- [English](./multi-agent.en.md)
+- [中文](./multi-agent.zh-CN.md)
 
 Topics:
 - AgentTool
@@ -96,8 +102,8 @@ Topics:
 - mailbox and leader approval bridge
 
 ### MCP
-- `mcp.en.md`
-- `mcp.zh-CN.md`
+- [English](./mcp.en.md)
+- [中文](./mcp.zh-CN.md)
 
 Topics:
 - MCP connection lifecycle
@@ -107,8 +113,8 @@ Topics:
 - policy-aware extension model
 
 ### Remote / Bridge
-- `remote-bridge.en.md`
-- `remote-bridge.zh-CN.md`
+- [English](./remote-bridge.en.md)
+- [中文](./remote-bridge.zh-CN.md)
 
 Topics:
 - bridge workers
@@ -118,8 +124,8 @@ Topics:
 - remote approval/control loops
 
 ### Telemetry
-- `telemetry.en.md`
-- `telemetry.zh-CN.md`
+- [English](./telemetry.en.md)
+- [中文](./telemetry.zh-CN.md)
 
 Topics:
 - analytics entry layer
@@ -129,8 +135,8 @@ Topics:
 - privacy controls and kill switches
 
 ### Update / Install
-- `update-install.en.md`
-- `update-install.zh-CN.md`
+- [English](./update-install.en.md)
+- [中文](./update-install.zh-CN.md)
 
 Topics:
 - auto updater
@@ -141,14 +147,12 @@ Topics:
 
 ---
 
-## Supporting materials already in repo
+## Supporting materials
 
-These are useful if you want structure before details:
-
-- `../README.md`
-- `../README.zh-CN.md`
-- `../npm-original/`
-- `../source/`
+- [README (English)](../README.md)
+- [README (中文)](../README.zh-CN.md)
+- [npm-original/](../npm-original/)
+- [source/](../source/)
 
 ---
 

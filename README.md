@@ -161,6 +161,45 @@ Start with:
 
 ---
 
+## Module cards
+
+### [Authentication & Login](./doc/authentication-login.en.md)
+[中文](./doc/authentication-login.zh-CN.md)
+
+Identity, OAuth, managed auth context, token sources, trusted-device coupling.
+
+### [Permissions & Risk Control](./doc/permissions-risk-control.en.md)
+[中文](./doc/permissions-risk-control.zh-CN.md)
+
+Permission modes, rules, classifiers, managed policy, shell-level safety.
+
+### [Multi-Agent](./doc/multi-agent.en.md)
+[中文](./doc/multi-agent.zh-CN.md)
+
+AgentTool, subagents, teammate/swarm runtime, task graphs, leader control.
+
+### [MCP](./doc/mcp.en.md)
+[中文](./doc/mcp.zh-CN.md)
+
+Connection lifecycle, auth, registry, dynamic tools/commands/resources.
+
+### [Remote / Bridge](./doc/remote-bridge.en.md)
+[中文](./doc/remote-bridge.zh-CN.md)
+
+Bridge workers, session ingress auth, trusted devices, direct connect, approval return paths.
+
+### [Telemetry](./doc/telemetry.en.md)
+[中文](./doc/telemetry.zh-CN.md)
+
+Datadog, 1P logging, GrowthBook, metadata enrichment, privacy controls.
+
+### [Update / Install](./doc/update-install.en.md)
+[中文](./doc/update-install.zh-CN.md)
+
+Auto updater, native installer, npm migration, package-manager detection, rollout safety.
+
+---
+
 ## Repository layout
 
 ### [`npm-original/`](./npm-original/)

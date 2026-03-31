@@ -164,6 +164,45 @@
 
 ---
 
+## 模块卡片
+
+### [认证登录](./doc/authentication-login.zh-CN.md)
+[English](./doc/authentication-login.en.md)
+
+身份体系、OAuth、managed auth context、token 来源与 trusted device 联动。
+
+### [权限风控](./doc/permissions-risk-control.zh-CN.md)
+[English](./doc/permissions-risk-control.en.md)
+
+permission mode、规则系统、classifier、managed policy 与 shell 级安全分析。
+
+### [多 Agent](./doc/multi-agent.zh-CN.md)
+[English](./doc/multi-agent.en.md)
+
+AgentTool、subagent、teammate/swarm runtime、task graph 与 leader control。
+
+### [MCP](./doc/mcp.zh-CN.md)
+[English](./doc/mcp.en.md)
+
+连接生命周期、auth、registry、动态 tools / commands / resources。
+
+### [远程 / 桥接](./doc/remote-bridge.zh-CN.md)
+[English](./doc/remote-bridge.en.md)
+
+bridge worker、session ingress auth、trusted device、direct connect、审批回流路径。
+
+### [埋点 / Telemetry](./doc/telemetry.zh-CN.md)
+[English](./doc/telemetry.en.md)
+
+Datadog、1P logging、GrowthBook、metadata enrich 与隐私控制。
+
+### [更新 / 安装](./doc/update-install.zh-CN.md)
+[English](./doc/update-install.en.md)
+
+auto updater、native installer、npm 迁移、package manager 检测与 rollout 安全。
+
+---
+
 ## 仓库结构
 
 ### [`npm-original/`](./npm-original/)
