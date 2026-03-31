@@ -1,6 +1,6 @@
 # 文档索引
 
-[返回 README](../README.zh-CN.md) · [English Index](./INDEX.en.md)
+[返回 README](../README.zh-CN.md) · [Executive Summary](./EXECUTIVE-SUMMARY.zh-CN.md) · [English Index](./INDEX.en.md)
 
 这个页面是本仓库研究文档的结构化导航中心。
 

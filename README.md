@@ -230,6 +230,8 @@ Top-level navigation in English and Chinese.
 
 ## Documentation entry points
 
+- [Executive Summary (English)](./doc/EXECUTIVE-SUMMARY.en.md)
+- [Executive Summary（中文）](./doc/EXECUTIVE-SUMMARY.zh-CN.md)
 - [Main documentation index (English)](./doc/INDEX.en.md)
 - [主文档索引（中文）](./doc/INDEX.zh-CN.md)
 

@@ -1,6 +1,6 @@
 # Documentation Index
 
-[Back to README](../README.md) · [中文索引](./INDEX.zh-CN.md)
+[Back to README](../README.md) · [Executive Summary](./EXECUTIVE-SUMMARY.en.md) · [中文索引](./INDEX.zh-CN.md)
 
 This page is the structured navigation hub for the research documents in this repository.
 

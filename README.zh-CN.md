@@ -233,6 +233,8 @@ auto updater、native installer、npm 迁移、package manager 检测与 rollout
 
 ## 文档入口
 
+- [Executive Summary（英文）](./doc/EXECUTIVE-SUMMARY.en.md)
+- [Executive Summary（中文）](./doc/EXECUTIVE-SUMMARY.zh-CN.md)
 - [英文主索引](./doc/INDEX.en.md)
 - [中文主索引](./doc/INDEX.zh-CN.md)
 
