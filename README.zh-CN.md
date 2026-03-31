@@ -48,7 +48,21 @@
   - 中文：`doc/telemetry.zh-CN.md`
   - English: `doc/telemetry.en.md`
 
-> 后续还会继续补充：更新/安装等模块的中英文专题分析。
+- 更新 / 安装 / Update / Install
+  - 中文：`doc/update-install.zh-CN.md`
+  - English: `doc/update-install.en.md`
+
+## 当前状态
+
+已完成模块分析：
+
+- 认证登录
+- 权限风控
+- 多 Agent
+- MCP
+- 远程 / 桥接
+- 埋点 / Telemetry
+- 更新 / 安装
 
 ## 说明
 

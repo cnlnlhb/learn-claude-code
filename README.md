@@ -52,7 +52,21 @@ This repository stores a local research copy of `@anthropic-ai/claude-code@2.1.8
   - English: `doc/telemetry.en.md`
   - 中文：`doc/telemetry.zh-CN.md`
 
-> More module reports will be added incrementally: update/install.
+- Update / Install
+  - English: `doc/update-install.en.md`
+  - 中文：`doc/update-install.zh-CN.md`
+
+## Status
+
+Completed module reports:
+
+- Authentication & Login
+- Permissions & Risk Control
+- Multi-Agent
+- MCP
+- Remote / Bridge
+- Telemetry
+- Update / Install
 
 ## Notes
 
