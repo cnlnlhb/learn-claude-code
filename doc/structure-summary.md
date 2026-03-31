@@ -1,0 +1,68 @@
+# Claude Code 2.1.88 结构分析
+
+- 自有源码文件数: 1906
+- 顶层目录统计:
+  - src: 1902
+  - vendor: 4
+
+## src 子目录统计
+- src/utils: 564
+- src/components: 389
+- src/commands: 207
+- src/tools: 184
+- src/services: 130
+- src/hooks: 104
+- src/ink: 96
+- src/bridge: 31
+- src/constants: 21
+- src/skills: 20
+- src/cli: 19
+- src/keybindings: 14
+- src/tasks: 12
+- src/migrations: 11
+- src/types: 11
+- src/context: 9
+- src/entrypoints: 8
+- src/memdir: 8
+- src/buddy: 6
+- src/state: 6
+- src/vim: 5
+- src/native-ts: 4
+- src/query: 4
+- src/remote: 4
+- src/screens: 3
+- src/server: 3
+- src/plugins: 2
+- src/upstreamproxy: 2
+- src/QueryEngine.ts: 1
+- src/Task.ts: 1
+- src/Tool.ts: 1
+- src/assistant: 1
+- src/bootstrap: 1
+- src/commands.ts: 1
+- src/context.ts: 1
+- src/coordinator: 1
+- src/cost-tracker.ts: 1
+- src/costHook.ts: 1
+- src/dialogLaunchers.tsx: 1
+- src/history.ts: 1
+- src/ink.ts: 1
+- src/interactiveHelpers.tsx: 1
+- src/main.tsx: 1
+- src/moreright: 1
+- src/outputStyles: 1
+- src/projectOnboardingState.ts: 1
+- src/query.ts: 1
+- src/replLauncher.tsx: 1
+- src/schemas: 1
+- src/setup.ts: 1
+- src/tasks.ts: 1
+- src/tools.ts: 1
+- src/voice: 1
+
+## 观察
+- src/commands 体量很大，CLI 命令面广，说明这是完整功能包而不只是最小终端壳。
+- src/tools 与 src/components/permissions、src/utils/permissions 形成明显的“工具调用 + 人机审批 + 规则校验”三层结构。
+- src/services/mcp、src/components/mcp、src/commands/mcp 说明 MCP 不是外挂功能，而是核心能力。
+- src/bridge、src/remote、src/server 表明它包含本地 CLI 之外的远程/桥接能力。
+- src/services/analytics、src/utils/telemetry、src/services/api 等目录显示埋点、远端 API、会话与用量管理都比较重。
