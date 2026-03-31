@@ -160,7 +160,7 @@ Topics:
 
 Useful future companion notes for this repo would be:
 
-- hidden commands / feature flags
+- [hidden commands / feature flags](./hidden-commands-feature-flags.en.md) / [中文](./hidden-commands-feature-flags.zh-CN.md)
 - permission-bypass paths
 - remote session protocol details
 - telemetry privacy boundaries

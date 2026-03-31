@@ -160,7 +160,7 @@
 
 这个仓库后面很适合继续补：
 
-- hidden commands / feature flags
+- [hidden commands / feature flags](./hidden-commands-feature-flags.en.md) / [中文](./hidden-commands-feature-flags.zh-CN.md)
 - 权限绕过链路
 - remote session 协议细节
 - telemetry 隐私边界

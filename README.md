@@ -2,6 +2,9 @@
 
 [中文 README](./README.zh-CN.md)
 
+**Source path:** [`source/`](./source/) → Claude Code reconstructed source tree  
+**Docs path:** [`doc/`](./doc/) → research notes, indexes, summaries, and module analysis
+
 A research repository for studying `@anthropic-ai/claude-code@2.1.88` from the published npm package.
 
 This repo is built from the released package artifact, its shipped sourcemap, and reconstructed source files. It is intended for reverse engineering, architecture study, and structured documentation — **not** as an official source mirror.
@@ -445,7 +448,7 @@ Completed module reports:
 
 Possible future additions to this repo:
 
-- hidden commands / feature flags report
+- hidden commands / feature flags report ✅ ([English](./doc/hidden-commands-feature-flags.en.md) / [中文](./doc/hidden-commands-feature-flags.zh-CN.md))
 - a dedicated permissions-bypass deep dive
 - a remote session protocol note
 - a telemetry privacy-boundary note
